@@ -10,7 +10,7 @@ module Brawlhalla
       # Search player by Steam ID.
       #
       # === Example
-      #   bh = Brawlhalla::API::Client.new(YOUR_API_KEY_HERE)
+      #   bh = Brawlhalla::API::Client.new('YOUR_API_KEY_HERE')
       #   bh.search(76561198048321884)
       def search(steamid)
         request(
@@ -22,7 +22,7 @@ module Brawlhalla
       # Get player stats by giving the Brawlhalla ID.
       #
       # === Example
-      #   bh = Brawlhalla::API::Client.new(YOUR_API_KEY_HERE)
+      #   bh = Brawlhalla::API::Client.new('YOUR_API_KEY_HERE')
       #   bh.stats(8817417)
       def stats(brawlhalla_id)
         request(path: "player/#{brawlhalla_id}/stats")
@@ -31,9 +31,9 @@ module Brawlhalla
       # Get player ranked stats by giving the Brawlhalla ID.
       #
       # === Example
-      #   bh = Brawlhalla::API::Client.new(YOUR_API_KEY_HERE)
-      #   bh.ranked_stats(8817417)
-      def ranked_stats(brawlhalla_id)
+      #   bh = Brawlhalla::API::Client.new('YOUR_API_KEY_HERE')
+      #   bh.ranked(8817417)
+      def ranked(brawlhalla_id)
         request(path: "player/#{brawlhalla_id}/ranked")
       end
 
