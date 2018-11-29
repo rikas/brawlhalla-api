@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Brawlhalla
   module API
     class Client

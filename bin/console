@@ -8,7 +8,8 @@ require 'brawlhalla/api'
 require 'dotenv'
 Dotenv.load
 
-bh = Brawlhalla::API::Client.new(ENV['API_KEY'])
+# Uncomment this line after adding your API key to .env file to use the bh client in the console.
+# bh = Brawlhalla::API::Client.new(ENV['API_KEY'])
 
 require 'pry'
 Pry.start

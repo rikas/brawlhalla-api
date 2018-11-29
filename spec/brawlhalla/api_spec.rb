@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe Brawlhalla::Api do
+RSpec.describe Brawlhalla::API do
   it 'has a version number' do
-    expect(Brawlhalla::Api::VERSION).not_to be nil
+    expect(Brawlhalla::API::VERSION).not_to be nil
   end
 end
