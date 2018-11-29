@@ -5,8 +5,9 @@ module Brawlhalla
     class Client
       BASE_URL = 'https://api.brawlhalla.com'
 
-      def initialize(api_key)
+      def initialize(api_key, debug: false)
         @api_key = api_key
+        @debug = debug
       end
 
       # Search player by Steam ID.
@@ -46,6 +47,7 @@ module Brawlhalla
           conn.headers['Content-Type'] = 'application/json'
           conn.use FaradayMiddleware::ParseJson
           conn.response :json, parser_options: { symbolize_names: true }
+          conn.response :logger if @debug
           conn.adapter Faraday.default_adapter
         end
       end
