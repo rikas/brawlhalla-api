@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+#
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'brawlhalla/api'
+
+require 'dotenv'
+Dotenv.load
+
+bh = Brawlhalla::API::Client.new(ENV['API_KEY'])
+
+require 'pry'
+Pry.start
