@@ -61,7 +61,7 @@ module Brawlhalla
 
       def build_url(path, params = {})
         url = Addressable::URI.join(path)
-        url.query_values = { api_key: ENV['API_KEY'] }.merge(params)
+        url.query_values = { api_key: @api_key }.merge(params)
         url
       end
     end
