@@ -8,8 +8,13 @@ require 'brawlhalla/api'
 require 'dotenv'
 Dotenv.load
 
-# Uncomment this line after adding your API key to .env file to use the bh client in the console.
-bh = Brawlhalla::API::Client.new(ENV['API_KEY'])
+Brawlhalla::API.configure do |config|
+  config.api_key = ENV['API_KEY']
+  config.debug = false
+end
+
+# So we can use Player, Clan, Client, etc. without namespacing every time.
+self.send(:include, Brawlhalla::API)
 
 require 'pry'
 Pry.start
