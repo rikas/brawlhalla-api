@@ -14,6 +14,9 @@ module Brawlhalla
         ATTRIBUTES.each do |attr|
           send("#{attr}=", json[attr])
         end
+
+        # Fix teamname encoding
+        @teamname = @teamname.encode('iso-8859-1')
       end
     end
   end

@@ -29,6 +29,9 @@ module Brawlhalla
           send("#{attr}=", value)
         end
 
+        # Fix player name encoding
+        @name = @name.encode('iso-8859-1')
+
         initialize_clan(json)
         initialize_legends(json)
       end
