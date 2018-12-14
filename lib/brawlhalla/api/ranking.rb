@@ -23,8 +23,11 @@ module Brawlhalla
           send("#{attr}=", json[attr])
         end
 
-        @legend_rankings = json[:legends].map { |legend_json| LegendRanking.new(legend_json) }
-        @doubles_rankings = json[:"2v2"].map { |doubles_json| DoublesRanking.new(doubles_json) }
+        legends = json[:legends] || []
+        doubles = json[:"2v2"] || []
+
+        @legend_rankings = legends.map { |legend_json| LegendRanking.new(legend_json) }
+        @doubles_rankings = doubles.map { |doubles_json| DoublesRanking.new(doubles_json) }
       end
     end
   end
