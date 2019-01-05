@@ -75,7 +75,7 @@ This endpoint retrieves ranked data about a player. It receives one argument - t
 the player.
 
 ```ruby
-ranked = Ranking.find('8817417')
+ranked = Brawlhalla::API::Ranking.find('8817417')
 ranked.wins # => 172
 ranked.region # => "EU"
 ranked.rating # => 1394
@@ -94,7 +94,7 @@ You can check each legend's rankings by calling the `#legend_rankings` method. T
 array of `Brawlhalla::API::LegendRanking` instances:
 
 ```ruby
-ranked = Ranking.find('8817417')
+ranked = Brawlhalla::API::Ranking.find('8817417')
 legend_rankings = ranked.legend_rankings # Array of LegendRanking instances
 legend_rankings.size # => 10
 
