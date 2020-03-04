@@ -6,9 +6,9 @@ module Brawlhalla
       ATTRIBUTES = %i[
         brawlhalla_id_one brawlhalla_id_two rating peak_rating tier wins games teamname region
         global_rank
-      ]
+      ].freeze
 
-      attr_accessor *ATTRIBUTES
+      attr_accessor(*ATTRIBUTES)
 
       def initialize(json)
         ATTRIBUTES.each do |attr|

@@ -1,7 +1,7 @@
 require: rubocop-rspec
 
 AllCops:
-  TargetRubyVersion: 2.5.3
+  TargetRubyVersion: 2.6.5
 
 # Don't force top level comments in every class
 Style/Documentation:
@@ -12,7 +12,7 @@ Style/ExpandPathArguments:
   Enabled: false
 
 # A good line length is 100 chars
-Metrics/LineLength:
+Layout/LineLength:
   Max: 100
   AllowURI: true
 
@@ -33,3 +33,12 @@ RSpec/ExampleLength:
 
 RSpec/MultipleExpectations:
   Max: 10
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true

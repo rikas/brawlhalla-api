@@ -8,9 +8,9 @@ module Brawlhalla
         wins damageunarmed damagethrownitem damageweaponone damageweapontwo damagegadgets kounarmed
         kothrownitem koweaponone koweapontwo kogadgets timeheldweaponone timeheldweapontwo xp level
         xp_percentage
-      ]
+      ].freeze
 
-      attr_accessor *ATTRIBUTES
+      attr_accessor(*ATTRIBUTES)
 
       def initialize(json)
         ATTRIBUTES.each do |attr|

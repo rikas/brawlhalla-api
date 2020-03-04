@@ -10,9 +10,9 @@ module Brawlhalla
       ATTRIBUTES = %i[
         brawlhalla_id name xp level xp_percentage games wins damagebomb damagespikeball
         damagesidekick hitsnowball kobomb komine kospikeball kosnowball
-      ]
+      ].freeze
 
-      attr_accessor *ATTRIBUTES
+      attr_accessor(*ATTRIBUTES)
       attr_reader :legend_stats, :clan
 
       def self.find(brawlhalla_id)

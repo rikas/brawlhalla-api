@@ -14,7 +14,7 @@ Brawlhalla::API.configure do |config|
 end
 
 # So we can use Player, Clan, Client, etc. without namespacing every time.
-self.send(:include, Brawlhalla::API)
+send(:include, Brawlhalla::API)
 
 require 'pry'
 Pry.start

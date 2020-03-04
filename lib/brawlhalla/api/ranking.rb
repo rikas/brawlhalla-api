@@ -8,9 +8,9 @@ module Brawlhalla
     class Ranking
       ATTRIBUTES = %i[
         name brawlhalla_id rating peak_rating tier wins games region global_rank region_rank
-      ]
+      ].freeze
 
-      attr_accessor *ATTRIBUTES
+      attr_accessor(*ATTRIBUTES)
       attr_reader :legend_rankings, :doubles_rankings
 
       def self.find(brawlhalla_id)

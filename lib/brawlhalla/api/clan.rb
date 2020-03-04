@@ -5,9 +5,10 @@ module Brawlhalla
     class Clan
       ATTRIBUTES = %i[
         clan_name clan_id clan_xp personal_xp
-      ]
+      ].freeze
 
-      attr_accessor *ATTRIBUTES
+      attr_accessor(*ATTRIBUTES)
+
       alias name clan_name
       alias id clan_id
       alias xp clan_xp
